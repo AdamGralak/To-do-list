@@ -1,19 +1,38 @@
-    <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <link href="CSS/normalize.css" rel="stylesheet">
-        <link href="CSS/style.css" rel="stylesheet">
-        <script src="JS/script.js" defer></script>
-        <title>To do list</title>
-    </head>
-    <body>
-        <form class="js-form">
-            <input class="js-taskContent">
-            <button class="js-addTask">Dodaj zadanie</button>
-        </form>
-        <ul class="js-tasks"> 
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="CSS/normalize.css" rel="stylesheet">
+    <link href="CSS/style.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
+        rel="stylesheet">
+    <script src="JS/script.js" defer></script>
+    <title>To do list</title>
+</head>
+
+<body class="container">
+    <h1 class="container__header">Lista zadań</h1>
+    <section class="container__section">
+        <h2 class="container__section-header">Dodaj nowe zadanie</h2>
+            <form class="js-form">
+                <div class="container__form">
+                    <div>
+                        <input class="js-taskContent container__form-input" type="text"
+                            placeholder="Co jest do zrobienia?">
+                    </div>
+                    <div class="container__form-addTask">
+                        <button class="js-addTask container__form-button">Dodaj zadanie</button>
+                    </div>
+                </div>
+            </form>
+    </section>
+    <section class="container__section">
+        <h2 class="container__section-header">Lista zadań:</h2>
+        <ul class="js-tasks container__section-list">
         </ul>
-    </body>
-    </html>
+    </section>
+</body>
+
+</html>

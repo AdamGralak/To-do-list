@@ -41,12 +41,14 @@
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
-              <li ${task.done ? "style=\"text-decoration: line-through\"" : ""}>
-              <button class="js-done">Zrobione?</button>  
-              <button class="js-remove">Usuń</button>
-                ${task.content}
+              <li class= "container__section-task">
+              <button class="js-done task__button"> ${task.done ? "✔️" : ""}</button>
+              <span class="list__item ${task.done ? "list__item--done" : ""}">
+              ${task.content}</span>
+                <button class="js-remove task__delete">🗑️</button>
               </li>
             `;
+
         }
         document.querySelector(".js-tasks").innerHTML = htmlString;
         bindEvents();
