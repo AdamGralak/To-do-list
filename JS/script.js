@@ -1,13 +1,5 @@
 {
     const tasks = [
-        {
-            content: "zadanie 1",
-            done: true,
-        },
-        {
-            content: "zadanie 2",
-            done: false,
-        },
     ];
 
     const removeTasks = (index) =>{
@@ -42,7 +34,7 @@
         for (const task of tasks) {
             htmlString += `
               <li class= "container__section-task">
-              <button class="js-done task__button"> ${task.done ? "✔️" : ""}</button>
+              <button class="js-done task__button"> ${task.done ? "✓" : ""}</button>
               <span class="list__item ${task.done ? "list__item--done" : ""}">
               ${task.content}</span>
                 <button class="js-remove task__delete">🗑️</button>
