@@ -4,32 +4,33 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/normalize.css" rel="stylesheet">
     <link href="css/style.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap"
         rel="stylesheet">
-    <script src="js/" defer></script>
+    <script src="js/script.js" defer></script>
     <title>To do list</title>
 </head>
 
-<body class="container">
-    <h1 class="container__header">Lista zadań</h1>
-    <section class="container__section">
-        <h2 class="container__section-header">Dodaj nowe zadanie</h2>
+<body class="body">
+    <h1 class="header">Lista zadań</h1>
+    <section class="section">
+        <h2 class="section__header">Dodaj nowe zadanie</h2>
             <form class="js-form">
-                <div class="container__form">
+                <div class="form">
                     <div>
-                        <input class="js-taskContent container__form-input" type="text"
+                        <input class="js-taskContent form__input" type="text"
                             placeholder="Co jest do zrobienia?">
                     </div>
-                    <div class="container__form-addTask">
-                        <button class="js-addTask container__form-button">Dodaj zadanie</button>
+                    <div class="form__addTask">
+                        <button class="js-addTask form__button">Dodaj zadanie</button>
                     </div>
                 </div>
             </form>
     </section>
-    <section class="container__section">
-        <h2 class="container__section-header">Lista zadań:</h2>
-        <ul class="js-tasks container__section-list">
+    <section class="section">
+        <h2 class="section__header">Lista zadań:</h2>
+        <ul class="js-tasks section__list">
         </ul>
     </section>
 </body>

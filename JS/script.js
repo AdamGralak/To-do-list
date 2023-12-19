@@ -8,7 +8,7 @@
     };
 
     const doneTasks = (index) =>{
-        tasks[index].done=!tasks[index].done
+        tasks[index].done = !tasks[index].done
         render();
     };
 
@@ -33,7 +33,7 @@
         let htmlString = "";
         for (const task of tasks) {
             htmlString += `
-              <li class= "container__section-task">
+              <li class= "section__task">
               <button class="js-done task__button"> ${task.done ? "✓" : ""}</button>
               <span class="list__item ${task.done ? "list__item--done" : ""}">
               ${task.content}</span>
@@ -55,7 +55,7 @@
         tasks.push({
             content: newTaskContent
         });
-        inputContent.value="";
+        inputContent.value= "";
         render();
     };
     

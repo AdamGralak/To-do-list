@@ -1,4 +1,4 @@
-.container {
+.body {
     display: grid;
     grid-template-columns: minmax(300px, 750px);
     grid-gap: 10px;
@@ -8,53 +8,46 @@
     justify-content: center;
 }
 
-.container__header {
+.header {
     margin-left: 0px;
     margin-block-end: 15px;
 }
 
-.container__section-header {
+.section__header {
     padding: 10px 20px;
     border-bottom: solid 2px #efefef;
     margin-block: 0px;
 }
 
-.container__section {
+.section {
     background-color: #fff;
 }
 
-.container__section-list {
+.section__list {
     padding-inline-start: 0px;
     list-style: none;
     padding: 20px;
 }
 
-.container__form {
+.form {
     display: grid;
     grid-template-columns: 4fr 1fr;
     padding: 10px 20px;
     margin-top: 2px;
+    grid-column-gap: 20px;
 }
 
-.container__form-input {
+.form__input {
+    display: grid;
     width: 100%;
     padding: 10px;
 }
 
-.container__form-addTask {
+.form__addTask {
     text-align: center;
 }
 
-.container__form-button {
-    border: none;
-    color: #fff;
-    background-color: teal;
-    padding: 10px;
-    font-weight: 400;
-    padding-bottom: 13px;
-}
-
-.container__section-task {
+.section__task {
     display: grid;
     grid-template-columns: auto 1fr auto;
     border-bottom: solid 2px #efefef;
@@ -88,26 +81,25 @@
     text-decoration: line-through;
 }
 
-@media (max-width: 767px){
-    .container__form{
-        display: flex;
-        justify-content: space-between;
-        flex-wrap: wrap;
-        flex-direction: column
-    }
-    
-    .container__form-button {
-        margin-top: 30px;
-        border: none;
-        background-color: teal;
-        color: #fff;
-        font-weight: 700;
-        padding: 10px 20px;
-        cursor: pointer;
-        width: 100%;
-    }
-    .container__form-input {    
-        border: 2px solid #f2f2f2;
-        width: 100%;
-    }
+.form__button {
+    border: 2px solid teal;
+    background-color: teal;
+    color: #fff;
+    font-weight: 700;
+    padding: 10px 20px;
+    cursor: pointer;
+    width: 100%;
+}
+.form__input {    
+    border: 2px solid #f2f2f2;
+    width: 100%;
+}
+
+    @media (max-width: 767px){
+        .form{
+            grid-template-columns: 1fr;
+        }
+        .form__button {
+            margin-top: 20px;
+        }
 }
