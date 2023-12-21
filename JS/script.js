@@ -1,16 +1,21 @@
 {
-    const tasks = [
+    let tasks = [
     ];
 
     const removeTasks = (index) =>{
-        tasks.splice(index, 1);
+        tasks = tasks.filter((task,i) => i !== index);
         render();
     };
 
-    const doneTasks = (index) =>{
-        tasks[index].done = !tasks[index].done
+    const doneTasks = (index) => {
+        tasks = tasks.map((task, i) => {
+          if (i === index) {
+            return { ...task, done: !task.done };
+          }
+          return task;
+        });
         render();
-    };
+      };
 
     const bindEvents = () =>{
         const removeButtons = document.querySelectorAll(".js-remove");
@@ -52,9 +57,12 @@
         if (newTaskContent === "") {
             return;
         }
-        tasks.push({
-            content: newTaskContent
-        });
+        
+        tasks = [
+            ...tasks,
+            {content: newTaskContent},
+        ];
+
         inputContent.value= "";
         render();
     };
