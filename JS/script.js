@@ -31,11 +31,28 @@
         render();
     };
 
+    const switchAllTaskDone = () => {
+        tasks = tasks.map((task) => ({
+            ...task,
+            done: true,
+        }));
+        render();
+    };
+
+    const markAllTaskDone = () => {
+        const switchAllTaskDoneButton = document.querySelector(".js-switchAllTaskDone");
+        if (switchAllTaskDoneButton) {
+            switchAllTaskDoneButton.addEventListener("click", () => {
+                switchAllTaskDone();
+            });
+        }
+    };
+
     const renderOptionsButtons = () => {
         if (tasks.length !== 0) {
             let optionsButtons = "";
             optionsButtons += `
-            <button class="section__optionButton"> Ukończ wszystkie</button>
+            <button class="section__optionButton js-switchAllTaskDone" ${tasks.every(({ done }) => done) ? "disabled" : ""}> Ukończ wszystkie</button>
             <button class="section__optionButton js-switchHideTaskDone"> ${hideTaskDone ? "Wyświetl ukończone" : "Ukryj ukończone"}</button>
         `;
             document.querySelector(".js-optionTasksButton").innerHTML = optionsButtons;
@@ -43,6 +60,7 @@
         else {
             document.querySelector(".js-optionTasksButton").innerHTML = "";
         }
+        markAllTaskDone();
         switchHideTaskDone();
     };
 
