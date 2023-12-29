@@ -17,6 +17,26 @@
     padding: 10px 20px;
     border-bottom: solid 2px #efefef;
     margin-block: 0px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.section__optionButton {
+    display: inline;
+    border: none;
+    background-color: #fff;
+    color: teal;
+    font-size: 16px;
+    transition: 0.5s;
+}
+
+.section__optionButton:hover {
+    color: hsl(180, 100%, 35%);
+}
+
+.section__optionButton-display {
+    display: flex;
+    flex-direction: row-reverse
 }
 
 .section {
@@ -54,6 +74,10 @@
     padding: 20px;
 }
 
+.section__task-hidden{
+    display: none;
+}
+
 .task__button {
     background-color: hsl(120, 70%, 42%);
     color: #fff;
@@ -78,7 +102,7 @@
     transition: 0.5s;
 }
 
-.task__delete:hover{
+.task__delete:hover {
     background-color: hsl(0, 100%, 65%);
 }
 
@@ -122,4 +146,11 @@
     .form__button {
         margin-top: 20px;
     }
-}
+    .section__header{
+        grid-template-columns: 1fr;
+    }
+    .section__optionButton-display{
+        flex-direction: column;
+        padding-top: 12px;
+    }
+    }
