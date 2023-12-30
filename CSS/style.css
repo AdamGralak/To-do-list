@@ -30,6 +30,11 @@
     transition: 0.5s;
 }
 
+.section__optionButton.section__optionButton:disabled{
+    color: grey;
+    transition: none;
+}
+
 .section__optionButton:hover {
     color: hsl(180, 100%, 35%);
 }
@@ -74,7 +79,7 @@
     padding: 20px;
 }
 
-.section__task-hidden{
+.section__task-hidden {
     display: none;
 }
 
@@ -146,11 +151,13 @@
     .form__button {
         margin-top: 20px;
     }
-    .section__header{
+
+    .section__header {
         grid-template-columns: 1fr;
     }
-    .section__optionButton-display{
+
+    .section__optionButton-display {
         flex-direction: column;
         padding-top: 12px;
     }
-    }
+}
